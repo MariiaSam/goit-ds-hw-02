@@ -1,6 +1,7 @@
 from sqlite3 import Error
 from connect import create_connection, database
 
+
 def create_table(conn, create_table_sql):
     """ Create a table from the create_table_sql statement """
     try:

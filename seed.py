@@ -2,6 +2,7 @@ from sqlite3 import Error
 from connect import create_connection, database
 from faker import Faker
 
+
 fake = Faker()
 
 def create_user(conn, user):
@@ -16,7 +17,9 @@ def create_user(conn, user):
         print(e)
     finally:
         cur.close()
+        
     return cur.lastrowid
+
 
 def create_status(conn, status):
     sql = '''
@@ -30,7 +33,9 @@ def create_status(conn, status):
         print(e)
     finally:
         cur.close()
+        
     return cur.lastrowid
+
 
 def create_task(conn, task):
     sql = '''
@@ -44,7 +49,9 @@ def create_task(conn, task):
         print(e)
     finally:
         cur.close()
+        
     return cur.lastrowid
+
 
 if __name__ == '__main__':
     with create_connection(database) as conn:

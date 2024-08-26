@@ -1,6 +1,7 @@
 import sqlite3
 from contextlib import contextmanager
 
+
 database = './homeWork.db'
 
 @contextmanager
